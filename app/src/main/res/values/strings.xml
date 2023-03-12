@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PraktikumModul3</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="register_text">Don’t have an account? <u>Register now</u></string>
+</resources>
