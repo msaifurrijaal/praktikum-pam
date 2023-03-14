@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HeadActivity">
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="156dp"
+        android:layout_height="307dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_hair"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/hair"
+        app:layout_constraintEnd_toEndOf="@+id/iv_head"
+        app:layout_constraintStart_toStartOf="@+id/iv_head"
+        app:layout_constraintTop_toTopOf="@+id/iv_head"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/iv_beard"
+        android:layout_width="162dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/beard"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+        app:layout_constraintEnd_toEndOf="@+id/iv_head"
+        app:layout_constraintStart_toStartOf="@+id/iv_head"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/iv_eyebrow"
+        android:layout_width="110dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/eyebrow"
+        app:layout_constraintEnd_toEndOf="@+id/iv_head"
+        app:layout_constraintStart_toStartOf="@+id/iv_head"
+        app:layout_constraintTop_toTopOf="@+id/iv_head"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/iv_mustache"
+        android:layout_width="230dp"
+        android:layout_height="112dp"
+        android:layout_marginBottom="45dp"
+        android:src="@drawable/moustache"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+        app:layout_constraintEnd_toEndOf="@+id/iv_head"
+        app:layout_constraintStart_toStartOf="@+id/iv_head"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/iv_eye"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="55dp"
+        android:src="@drawable/eyes"
+        app:layout_constraintEnd_toEndOf="@+id/iv_head"
+        app:layout_constraintStart_toStartOf="@+id/iv_head"
+        app:layout_constraintTop_toTopOf="@+id/iv_eyebrow" />
+
+    <CheckBox
+        android:id="@+id/check_rambut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rambut"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/check_kumis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head"
+        android:layout_marginTop="80dp"
+        tools:layout_editor_absoluteY="448dp" />
+
+    <CheckBox
+        android:id="@+id/check_kumis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kumis"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/check_rambut"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head"
+        android:layout_marginTop="80dp"
+        tools:layout_editor_absoluteY="446dp" />
+
+    <CheckBox
+        android:id="@+id/check_alis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alis"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/check_rambut"
+        app:layout_constraintTop_toBottomOf="@+id/check_rambut"
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:id="@+id/check_janggut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Janggut"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/check_kumis"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/check_kumis"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
