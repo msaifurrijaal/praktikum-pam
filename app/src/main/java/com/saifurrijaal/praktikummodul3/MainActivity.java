@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
     Button btnLogin;
     EditText etEmail;
     EditText etPassword;
-
+    TextView tvRegister;
+    String email = "";
+    String password = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btn_login);
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
+        tvRegister = findViewById(R.id.tv_register);
+
+        email = getIntent().getStringExtra("email");
+        password = getIntent().getStringExtra("password");
+
+        if (email != null && password != null) {
+            etEmail.setText(email);
+            etPassword.setText(password);
+        }
+
+        tvRegister.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,5 +62,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        etEmail.setText("");
+        etPassword.setText("");
     }
 }

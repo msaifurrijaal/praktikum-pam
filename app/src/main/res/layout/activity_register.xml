@@ -61,13 +61,13 @@
                 android:inputType="textPassword"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_btn"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="38dp"
-                android:text="LOGIN"
+                android:text="REGISTER"
                 android:textColor="#3F82E6"
                 android:textSize="16sp"
                 android:elevation="8dp" />
@@ -140,10 +140,10 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_register"
+                android:id="@+id/tv_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_text"
+                android:text="@string/login_text"
                 android:fontFamily="@font/roboto"
                 android:textColor="@color/white"
                 android:textSize="12sp"
